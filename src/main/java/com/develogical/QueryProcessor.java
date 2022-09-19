@@ -23,6 +23,17 @@ public class QueryProcessor {
 
             return String.valueOf(result);
         }
+
+        if(query.toLowerCase().contains("plus")){
+            String[] numArray = query.split("is")[1].split("plus");
+            int result = 0;
+            for(String num : numArray){
+                result += Integer.parseInt(num);
+            }
+
+            return String.valueOf(result);
+        }
+
         return "";
     }
 }
