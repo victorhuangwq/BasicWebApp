@@ -1,5 +1,6 @@
 package com.develogical;
 
+import java.util.*;
 public class QueryProcessor {
 
     public String process(String query) {
@@ -13,7 +14,15 @@ public class QueryProcessor {
             return "Vinuda";
         }
 
-        return "";
+        if(query.toLowerCase().contains("largest number")){
+            String[] numArray = query.split(":")[1].split(",");
+            int result = 0;
+            for(String num : numArray){
+                result = Integer.max(result, Integer.parseInt(num));
+            }
+
+            return String.valueOf(result);
+        }
         
     }
 }
