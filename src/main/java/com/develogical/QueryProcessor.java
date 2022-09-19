@@ -14,7 +14,7 @@ public class QueryProcessor {
             return "Vinuda";
         }
 
-        if(query.toLowerCase().contains("largest number")){
+        if(query.toLowerCase().contains("largest")){
             String[] numArray = query.split(":")[1].split(",");
             int result = 0;
             for(String num : numArray){
