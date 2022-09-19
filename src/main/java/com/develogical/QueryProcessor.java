@@ -18,7 +18,7 @@ public class QueryProcessor {
             String[] numArray = query.split(":")[1].split(",");
             int result = 0;
             for(String num : numArray){
-                result = Integer.max(result, Integer.parseInt(num));
+                result = Integer.max(result, Integer.parseInt(num.trim()));
             }
 
             return String.valueOf(result);
@@ -28,7 +28,7 @@ public class QueryProcessor {
             String[] numArray = query.split("is")[1].split("plus");
             int result = 0;
             for(String num : numArray){
-                result += Integer.parseInt(num);
+                result += Integer.parseInt(num.trim());
             }
 
             return String.valueOf(result);
