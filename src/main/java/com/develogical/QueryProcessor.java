@@ -35,7 +35,7 @@ public class QueryProcessor {
         }
 
         if(query.toLowerCase().contains("multiplied")){
-            String[] numArray = query.split("is")[1].split("multiplied");
+            String[] numArray = query.split("is")[1].split("multiplied by");
             int result = 1;
             for(String num : numArray){
                 result *= Integer.parseInt(num.trim());
@@ -43,7 +43,6 @@ public class QueryProcessor {
 
             return String.valueOf(result);
         }
-
 
         return "";
     }
